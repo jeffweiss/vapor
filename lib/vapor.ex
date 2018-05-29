@@ -75,7 +75,7 @@ defmodule Vapor do
       args
       |> fetch_config
 
-    GenServer.start_link(module, config, opts)
+    Vapor.Supervisor.start_link(config, opts)
   end
 
   defp fetch_config(args) do
