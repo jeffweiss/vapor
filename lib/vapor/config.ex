@@ -35,7 +35,7 @@ defmodule Vapor.Config do
           [] ->
             {:error, Vapor.NotFoundError}
 
-          [{^key, value}] ->
+          [{^key, [{_source,value}|_]}] ->
             Config.Converter.apply(value, type)
         end
       end

@@ -83,6 +83,7 @@ defmodule VaporTest do
       TestConfig.start_link(config)
 
       TestConfig.set("foo", "manual foo")
+      TestConfig.set("bar", "manual typo")
       TestConfig.set("bar", "manual bar")
 
       assert TestConfig.get!("foo", as: :string) == "manual foo"

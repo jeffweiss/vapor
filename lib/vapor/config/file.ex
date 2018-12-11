@@ -27,6 +27,7 @@ defmodule Vapor.Config.File do
   end
 
   defimpl Vapor.Provider do
+    def source_name(%Vapor.Config.File{}), do: :file
     def load(%{path: path, format: format}) do
       case File.read(path) do
         {:ok, str} ->

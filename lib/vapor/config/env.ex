@@ -44,6 +44,7 @@ defmodule Vapor.Config.Env do
   defp build_prefix(prefix), do: "#{prefix}_"
 
   defimpl Vapor.Provider do
+    def source_name(%Vapor.Config.Env{}), do: :env
     def load(%{prefix: :none, bindings: bindings}) do
       envs = System.get_env()
 

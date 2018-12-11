@@ -1,5 +1,6 @@
 defmodule Vapor.Config.EnvTest do
   use ExUnit.Case, async: false
+  doctest Vapor.Config.Env
 
   alias Vapor.Config.Env
 

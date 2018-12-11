@@ -1,5 +1,6 @@
 defmodule Vapor.ConfigTest do
   use ExUnit.Case, async: true
+  doctest Vapor.Config
 
   defmodule TestConfig do
     use Vapor.Config
